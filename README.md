@@ -12,14 +12,13 @@ functions had been written:
     already been calculated (and the matrix has not changed), then
     `cacheSolve` should retrieve the inverse from the cache.
 
-Both functions are created in the cachematrix.R file. The way the functions
-can be tested is the following (just as an example):
+Both functions are created in the cachematrix.R file. To test the functions please download the cachematrix.R file in your working directory and run the following commands in the R console (just as an example):
 
-> source("cachematrix.R")
-> demomatrix = rbind(c(8,3,4),c(2,3,5),c(3,8,2))
-> cacheddemo = makeCacheMatrix(demomatrix)
-> inversedemo = cacheSolve(cacheddemo)
-> inversedemo = cacheSolve(cacheddemo)
+- source("cachematrix.R")
+- demomatrix = rbind(c(8,3,4),c(2,3,5),c(3,8,2))
+- cacheddemo = makeCacheMatrix(demomatrix)
+- inversedemo = cacheSolve(cacheddemo)
+- inversedemo = cacheSolve(cacheddemo)
 
 The last command should return a message stating that the inverse was obtained
 from cache. The inversedemo variable contains the inverse of the matrix demomatrix.
